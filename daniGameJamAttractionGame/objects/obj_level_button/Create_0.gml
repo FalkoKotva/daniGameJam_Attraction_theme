@@ -1,5 +1,5 @@
 // Inherit the parent event
 event_inherited();
-locked = false;
+locked = true;
 number = 0;
 level = "Level"
