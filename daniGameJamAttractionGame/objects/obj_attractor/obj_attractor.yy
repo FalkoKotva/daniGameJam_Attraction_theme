@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_blackhole",
+    "path":"sprites/spr_blackhole/spr_blackhole.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

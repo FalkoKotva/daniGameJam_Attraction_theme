@@ -25,7 +25,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"is_attractable","filters":[],"listItems":[],"multiselect":false,"name":"is_attractable","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"number_of_streams","filters":[],"listItems":[],"multiselect":false,"name":"number_of_streams","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"stream_type","filters":[],"listItems":[],"multiselect":false,"name":"stream_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_matrix_stream_parent","path":"objects/obj_matrix_stream_parent/obj_matrix_stream_parent.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_matrix_stream_parent","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

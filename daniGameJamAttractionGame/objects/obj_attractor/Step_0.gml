@@ -4,6 +4,9 @@ x = mouse_x;
 
 // Ak držíme ľavé tlačidlo
 if (mouse_check_button(mb_left)) {
+	audio_play_sound(snd_menu_button,0,false,1,0,random_range(0.5,0.8));
+	
+	image_speed = 1;
     var list = ds_list_create();
     
     collision_circle_list(x, y, attract_radius, obj_matrix_stream_parent, false, true, list, false);
@@ -20,7 +23,7 @@ if (mouse_check_button(mb_left)) {
         if (inst.is_attractable) {
             var dist = point_distance(x, y, inst.x, inst.y);
             
-            if (dist < attract_radius) {
+            if (dist < attract_radius && y+32 > inst.y) {
                 inst.is_being_attracted = true; // tento stream je aktuálne v dosahu
 
                 var angle_to_attractor = point_direction(inst.x, inst.y, x, y);
@@ -49,44 +52,24 @@ if (mouse_check_button(mb_left)) {
             move_angle = 270; // nastav smer padania
         }
     }
+	
+	
+	for (var i = 0; i < 5; i++) {
+	    var radius = irandom_range(40, 80);
+	    var angle = irandom(360);
+	    var xx = x + lengthdir_x(radius, angle);
+	    var yy = y + lengthdir_y(radius, angle);
+	    part_particles_create(part_sys, xx, yy, part_ring, 1);
+	}
 }
 // Ak nie je držané tlačidlo
 else {
     with (obj_matrix_stream_parent) {
         move_angle = 270;
     }
+	image_speed = 0;
+	audio_stop_sound(snd_menu_button);
 }
 
 
 
-
-// Emituj častice stále
-part_particles_create(ps, x, y, pt_blackhole, 10);
-
-// --- Ručné nasávanie častíc do stredu ---
-var list = ds_list_create();
-collision_circle_list(x, y, attract_radius, obj_attractor, false, true, list, false);
-
-for (var i = 0; i < ds_list_size(list); i++) {
-    var inst = list[| i];
-
-    // Počítaj vzdialenosť a smer
-    var dist = point_distance(x, y, inst.x, inst.y);
-    var dir_to_center = point_direction(inst.x, inst.y, x, y);
-
-    if (dist > 5) {
-        // Spiralovanie: pridaj rotáciu
-        var spiral_dir = dir_to_center + 90; // kolmo na vektor do stredu
-        inst.x += lengthdir_x(attract_force * (dist / attract_radius), spiral_dir);
-        inst.y += lengthdir_y(attract_force * (dist / attract_radius), spiral_dir);
-
-        // Jemné prisatie smerom ku stredu
-        inst.x += lengthdir_x(attract_force * 0.5, dir_to_center);
-        inst.y += lengthdir_y(attract_force * 0.5, dir_to_center);
-    }
-    else {
-        // Ak už sú v strede, destroy
-        instance_destroy(inst);
-    }
-}
-ds_list_destroy(list);

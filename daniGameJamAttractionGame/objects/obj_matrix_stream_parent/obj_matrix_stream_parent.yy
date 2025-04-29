@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"CP_PortraitsB_11",
-    "path":"sprites/CP_PortraitsB_11/CP_PortraitsB_11.yy",
+    "name":"spr_collision_mask",
+    "path":"sprites/spr_collision_mask/spr_collision_mask.yy",
   },
   "spriteMaskId":null,
   "visible":true,
