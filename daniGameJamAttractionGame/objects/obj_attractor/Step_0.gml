@@ -1,9 +1,18 @@
 // Pohyb attractora podľa myši
 x = mouse_x;
-//y = mouse_y;
+y = mouse_y;
 
 // Ak držíme ľavé tlačidlo
 if (mouse_check_button(mb_left)) {
+	// set global alert level
+	global.current_alert = global.current_alert +  1;
+	if(global.current_alert >= 100){
+		global.current_alert = 100;
+	}
+	if(global.current_alert = 75 and global.hurt == false){
+		global.hurt = true;
+	}
+	
 	audio_play_sound(snd_menu_button,0,false,1,0,random_range(0.5,0.8));
 	
 	image_speed = 1;
@@ -38,6 +47,7 @@ if (mouse_check_button(mb_left)) {
 
                 // Ak je veľmi blízko attractoru
                 if (dist < 10) {
+					global.current_data +=1;
                     instance_destroy(inst);
                 }
             }
@@ -69,6 +79,11 @@ else {
     }
 	image_speed = 0;
 	audio_stop_sound(snd_menu_button);
+	
+	global.current_alert = global.current_alert -  1;
+	if(global.current_alert <= 0){
+		global.current_alert = 0;
+	}
 }
 
 

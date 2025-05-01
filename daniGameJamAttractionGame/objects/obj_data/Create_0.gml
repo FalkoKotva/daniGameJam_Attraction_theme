@@ -12,3 +12,7 @@ is_attracted = false; // Momentálny stav priťahovania
 move_angle = 270;
 // Koľko stôp bude za hlavným znakom
 trail_length = 6;
+
+
+ang = 45;
+frame = 0;

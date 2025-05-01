@@ -7,7 +7,7 @@ y += lengthdir_y(stream_speed, move_angle);
 if (y > room_height + trail_length * stream_fontsize) {
     // Resetuj hore
     y = -irandom(300);
-    x = irandom(room_width);
+    x = irandom_range(160,room_width - 160);
 	move_angle = 270; // reset na padanie dole
     // Nový náhodný znak
     stream_character = chr(irandom_range(33, 126));

@@ -1,7 +1,7 @@
 /// @description Initialize attractor
 
 attract_radius = 200; // Dosah, v ktorom priťahuje streamy
-attract_force = 2;  // Sila, akou priťahuje
+attract_force = 5;  // Sila, akou priťahuje
 
 //Particle system
 ps = part_system_create();

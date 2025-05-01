@@ -1,1 +1,1 @@
-room_goto(Menu_levels);
+room_goto(Levels);
