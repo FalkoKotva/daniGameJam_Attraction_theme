@@ -1,6 +1,6 @@
 
 if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_get_name(room) != "Settings"){
-	show_debug_message($"level 1 step");
+
 	if (red_alpha > 0) {
 	   red_alpha -= 0.025; // Changing 0.25 here will effect how fast the red fades, a higher number is a quicker fade
 	}
@@ -16,13 +16,31 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 	   }
 	}
 
-	// End of the level 
+	// Lose
 	if(global.current_alert == global.max_alert){
-		game_restart();
+		global.current_data = 0;
+		global.current_alert = 0;
+		global.max_data = 0;
+		room_goto(Levels)
+		
+		
 	}
+	// Win
+	if(global.current_data == global.max_data and global.max_data != 0){
+		global.current_data = 0;
+		global.current_alert = 0;
+		global.max_data = 0;
 
-	if(global.current_data == global.max_data){
+		if (global.current_level <= 4){
+			global.levels[0,global.current_level] = false; 
+		} else 	if (global.current_level > 4 and global.current_level < 10){
+			global.levels[1,global.current_level] = false; 
+		} else 	if (global.current_level >= 10){
+			global.levels[2,global.current_level] = false; 
+		} 
+		show_debug_message($"Levels: {global.max_data}");
 		room_goto(Levels);
+
 	}
 	
 }

@@ -3,19 +3,21 @@
   "%Name":"obj_data",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_data",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_data_parent","path":"objects/obj_data_parent/obj_data_parent.yy",},"propertyId":{"name":"trial_sprite","path":"objects/obj_data_parent/obj_data_parent.yy",},"resource":{"name":"spr_data_mail","path":"sprites/spr_data_mail/spr_data_mail.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_data_mail",},
+  ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Data",
+    "path":"folders/Objects/Data.yy",
   },
   "parentObjectId":{
-    "name":"obj_matrix_stream_parent",
-    "path":"objects/obj_matrix_stream_parent/obj_matrix_stream_parent.yy",
+    "name":"obj_data_parent",
+    "path":"objects/obj_data_parent/obj_data_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

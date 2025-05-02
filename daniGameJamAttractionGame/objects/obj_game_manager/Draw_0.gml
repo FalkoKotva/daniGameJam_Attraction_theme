@@ -33,6 +33,11 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 	draw_sprite_ext(spr_bar_ver,0,56,546,1,_scale,180,c_white,1);
 	// draw current alert state
 	draw_sprite_ext(spr_bar_ver,_spr_ind,56,546,1,spc,180,c_white,1);
+	draw_set_font(title);
+	draw_set_color(c_white);
+	draw_text(25,200,"A\nl\na\nr\nm\n!\n");
+	draw_set_color(c_white);
+	draw_set_font(standard);
 
 #endregion
 
@@ -57,6 +62,12 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 	draw_sprite_ext(spr_bar_hor,0,448,10,_scale,1,0,c_white,1);
 	// draw current alert state
 	draw_sprite_ext(spr_bar_hor,_spr_ind,448,10,spc,1,0,c_white,1);
+	
+	draw_set_font(title);
+	draw_set_color(c_white);
+	draw_text(548,15,"Data to collect!");
+	draw_set_color(c_white);
+	draw_set_font(standard);
 
 #endregion
 draw_set_color(c_white);

@@ -10,8 +10,8 @@
   "name":"obj_matrix_rain",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"MatrixShitEffect",
+    "path":"folders/Objects/MatrixShitEffect.yy",
   },
   "parentObjectId":null,
   "persistent":false,

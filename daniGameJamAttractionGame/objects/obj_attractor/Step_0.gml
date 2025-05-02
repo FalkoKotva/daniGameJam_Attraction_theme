@@ -18,10 +18,10 @@ if (mouse_check_button(mb_left)) {
 	image_speed = 1;
     var list = ds_list_create();
     
-    collision_circle_list(x, y, attract_radius, obj_matrix_stream_parent, false, true, list, false);
+    collision_circle_list(x, y, attract_radius, obj_data_parent, false, true, list, false);
     
     // Najprv všetky streamy nastavíme na "voľný pád"
-    with (obj_matrix_stream_parent) {
+    with (obj_data_parent) {
         is_being_attracted = false; // vlastná premenná v streame
     }
 
@@ -32,7 +32,7 @@ if (mouse_check_button(mb_left)) {
         if (inst.is_attractable) {
             var dist = point_distance(x, y, inst.x, inst.y);
             
-            if (dist < attract_radius && y+32 > inst.y) {
+            if (dist < attract_radius && y+32 > inst.y) { // ak je v radiuse a je nad attractorom
                 inst.is_being_attracted = true; // tento stream je aktuálne v dosahu
 
                 var angle_to_attractor = point_direction(inst.x, inst.y, x, y);
@@ -47,7 +47,12 @@ if (mouse_check_button(mb_left)) {
 
                 // Ak je veľmi blízko attractoru
                 if (dist < 10) {
-					global.current_data +=1;
+					if(inst.is_protecting){
+						global.current_alert += inst.value;
+					} else {
+						global.current_data += inst.value;
+					}
+				
                     instance_destroy(inst);
                 }
             }
@@ -57,7 +62,7 @@ if (mouse_check_button(mb_left)) {
     ds_list_destroy(list);
 
     // Teraz všetky streamy, ktoré NIE sú priťahované, padajú normálne dole
-    with (obj_matrix_stream_parent) {
+    with (obj_data_parent) {
         if (!is_being_attracted) {
             move_angle = 270; // nastav smer padania
         }
@@ -65,7 +70,7 @@ if (mouse_check_button(mb_left)) {
 	
 	
 	for (var i = 0; i < 5; i++) {
-	    var radius = irandom_range(40, 80);
+	    var radius = irandom_range(40,attract_radius);
 	    var angle = irandom(360);
 	    var xx = x + lengthdir_x(radius, angle);
 	    var yy = y + lengthdir_y(radius, angle);
@@ -74,7 +79,7 @@ if (mouse_check_button(mb_left)) {
 }
 // Ak nie je držané tlačidlo
 else {
-    with (obj_matrix_stream_parent) {
+    with (obj_data_parent) {
         move_angle = 270;
     }
 	image_speed = 0;
