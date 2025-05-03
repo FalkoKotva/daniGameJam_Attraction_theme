@@ -1,9 +1,9 @@
 draw_set_font(standard);
 draw_self();
 
-if(room_get_name(room) == "Menu_levels"){
+if(room_get_name(room) == "Levels"){
 	draw_set_font(title);
-	draw_text(590,4, room_text);
+	draw_text(1040,10, $"Money: {global.money}");
 	draw_set_font(standard);
 
 	draw_set_font(title);
@@ -70,6 +70,7 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 	draw_set_font(standard);
 
 #endregion
+
 draw_set_color(c_white);
 
 }

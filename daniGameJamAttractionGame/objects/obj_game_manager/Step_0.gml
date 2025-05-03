@@ -17,7 +17,7 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 	}
 
 	// Lose
-	if(global.current_alert == global.max_alert){
+	if(global.current_alert >= global.max_alert){
 		global.current_data = 0;
 		global.current_alert = 0;
 		global.max_data = 0;

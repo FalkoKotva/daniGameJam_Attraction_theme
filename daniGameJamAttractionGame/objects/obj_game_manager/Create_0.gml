@@ -1,15 +1,16 @@
 //Player data
-global.money = 0;
-
-
+global.money = 260;
+global.attract_radius = 500;
+global.attract_force = 5;
+global.upgrades = [false,false];
 
 global.spawn_offset = 160;
 global.current_level = 0
 
 global.levels = [
-[false,true,true,true,true],
-[true,true,true,true,true],
-[true,true,true,true,true],
+[false,false,false,false,false],
+//[true,true,true,true,true],
+//[true,true,true,true,true],
 ]
 room_text = "";
 red_alpha = 0;
@@ -25,5 +26,9 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 } else {
 	window_set_cursor(cr_arrow);
 }
+
+
+// Play bg music
+audio_play_sound(bg_music,0,true,1,0,random_range(0.9,1.1));
 
 

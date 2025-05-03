@@ -10,7 +10,10 @@
   ],
   "managed":true,
   "name":"obj_button_settings",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Credits",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"level_to_go","path":"objects/obj_button_parent/obj_button_parent.yy",},"resource":{"name":"Settings","path":"rooms/Settings/Settings.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Settings",},
+  ],
   "parent":{
     "name":"UI",
     "path":"folders/Objects/UI.yy",

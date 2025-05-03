@@ -1,8 +1,8 @@
 /// @description Initialize attractor
 
-//attract_radius = 500; // Dosah, v ktorom priťahuje streamy
+//global.attract_radius = 500; // Dosah, v ktorom priťahuje streamy
 attract_force = 5;  // Sila, akou priťahuje
-
+invincible = true;
 //Particle system
 ps = part_system_create();
 part_system_depth(ps, -10);

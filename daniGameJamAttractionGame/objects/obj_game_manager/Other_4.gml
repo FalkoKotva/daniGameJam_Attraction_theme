@@ -12,16 +12,20 @@ if((room_get_name(room) != "Menu") and (room_get_name(room) != "Levels") and (ro
 	}
 	show_debug_message($"Max data: {spawners}");
 	show_debug_message($"Max data: {global.max_data}");
+	
+	//Invincibility for some time after the game starts
+	alarm[0] = game_get_speed(gamespeed_fps);
 }
 
 if(room_get_name(room) == "Levels"){
+
 	room_text = "Menu";
 	show_debug_message(room_get_name(room));
 	
 	var _offsetx = 0;
 	var _offsety = 0;
 	var _number = 1;
-	for (var i = 0; i < 3; i++){
+	for (var i = 0; i < 1; i++){
 		
 		for (var j = 0; j < 5; j++){
 			var _button_instance = instance_create_layer(441+ _offsetx, 246 + _offsety, layer,obj_level_button);
@@ -38,4 +42,13 @@ if(room_get_name(room) == "Levels"){
 		_offsety =_offsety+124
 		
 	}
+	with(obj_upgrade_radius){
+		purchased = global.upgrades[index];
+	}
+	with(obj_upgrade_alert){
+		purchased = global.upgrades[index];
+	}
+	
+	
+
 }
