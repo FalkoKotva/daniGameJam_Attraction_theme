@@ -6,6 +6,7 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_70E56DFA","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_649076A5","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_4B5D3586","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_495EB159","path":"rooms/Level1/Level1.yy",},
@@ -18,6 +19,7 @@
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2656D8A2_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2656D8A2_1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_frame_bottom","path":"sprites/spr_frame_bottom/spr_frame_bottom.yy",},"x":279.5,"y":655.0,},
       ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_70E56DFA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70E56DFA","objectId":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":344.0,"y":136.0,},
         {"$GMRInstance":"v2","%Name":"inst_649076A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_649076A5","objectId":{"name":"obj_data_spawner","path":"objects/obj_data_spawner/obj_data_spawner.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_data_spawner","path":"objects/obj_data_spawner/obj_data_spawner.yy",},"propertyId":{"name":"stream_type","path":"objects/obj_data_spawner/obj_data_spawner.yy",},"resource":{"name":"obj_data","path":"objects/obj_data/obj_data.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_data",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_data_spawner","path":"objects/obj_data_spawner/obj_data_spawner.yy",},"propertyId":{"name":"offset","path":"objects/obj_data_spawner/obj_data_spawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"160",},
