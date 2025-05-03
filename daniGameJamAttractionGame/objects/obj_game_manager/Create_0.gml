@@ -1,17 +1,20 @@
 //Player data
-global.money = 260;
+global.money = 1000;
 global.attract_radius = 500;
 global.attract_force = 5;
+//Upgrades [radius, alert]
 global.upgrades = [false,false];
+global.number_of_use = [3,3]
 
 global.spawn_offset = 160;
 global.current_level = 0
 
 global.levels = [
-[false,false,false,false,false],
+[false,true,true,true,true],
 //[true,true,true,true,true],
 //[true,true,true,true,true],
 ]
+
 room_text = "";
 red_alpha = 0;
 global.hurt = false;

@@ -38,6 +38,8 @@
     {"$GMObjectProperty":"v1","%Name":"purchased","filters":[],"listItems":[],"multiselect":false,"name":"purchased","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"tooltip_text","filters":[],"listItems":[],"multiselect":false,"name":"tooltip_text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"+50 to aler meter","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"index","filters":[],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"number_of_use","filters":[],"listItems":[],"multiselect":false,"name":"number_of_use","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"price","filters":[],"listItems":[],"multiselect":false,"name":"price","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

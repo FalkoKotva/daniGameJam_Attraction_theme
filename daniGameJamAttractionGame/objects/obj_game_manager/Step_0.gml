@@ -21,7 +21,9 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 		global.current_data = 0;
 		global.current_alert = 0;
 		global.max_data = 0;
-		room_goto(Levels)
+		var scr = instance_create_layer(room_width/2, room_height/2, layer, obj_end_screen);
+		scr.is_win = false; // alebo false
+		//room_goto(Levels)
 		
 		
 	}
@@ -39,7 +41,10 @@ if(room_get_name(room) != "Menu" and room_get_name(room) != "Levels" and room_ge
 			global.levels[2,global.current_level] = false; 
 		} 
 		show_debug_message($"Levels: {global.max_data}");
-		room_goto(Levels);
+		
+		var scr = instance_create_layer(room_width/2, room_height/2, layer, obj_end_screen);
+		scr.is_win = true; // alebo false
+		//room_goto(Levels);
 
 	}
 	
